@@ -10,7 +10,6 @@ import Raycaster.Vektor.Vektor;
 import Raycaster.Wall.Wall;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
 
 public class Manager {
     public Mover mover = new Mover();
