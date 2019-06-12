@@ -48,6 +48,13 @@ public class Wall {
     public double getHeight() {
         return height;
     }
+
+    /**
+     *
+     * @param p1 ray point 1
+     * @param p2 ray point 2
+     * @return returns array with length, x, y
+     */
     public double[] intersection(Punkt p1, Punkt p2) {
         // calculates Intersection with ray
         Punkt p3 = punkt1;

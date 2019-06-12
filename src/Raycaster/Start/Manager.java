@@ -39,7 +39,7 @@ public class Manager {
             intersect[3] = 0;
             for (int a = 0; a < walls; a++) {
                 double[] intersect2;
-                intersect2 = wall[a].intersection(ray[i].getP1(), ray[i].getP2());
+                intersect2 = wall[a].intersection(ray[i].getP1(),ray[i].getP2());
                 if (intersect2 != null && intersect2[2] < intersect[2]) {
                     intersect[0] = intersect2[0];
                     intersect[1] = intersect2[1];
