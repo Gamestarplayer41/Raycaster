@@ -13,7 +13,6 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class Manager {
-    public int d = 10;
     public Mover mover = new Mover();
     public double walls = 100;
     public Wall[] wall = new Wall[(int) walls];
