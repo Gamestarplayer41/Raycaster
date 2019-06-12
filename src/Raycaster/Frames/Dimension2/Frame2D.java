@@ -33,6 +33,7 @@ public class Frame2D extends JPanel {
     }
 
     private void paintWall(Graphics g) {
+        //paints Wall
         g.setColor(Color.white);
         for(int i = 0; i<Start.manager.walls; i++){
             Start.manager.wall[i].getP1();
@@ -41,6 +42,7 @@ public class Frame2D extends JPanel {
     }
 
     private void paintRay(Graphics g) {
+        //paints Rays
         Start.manager.calcIntersect();
         g.setColor(Color.white);
         for (int i = 0; i < Start.manager.Rays; i++) {

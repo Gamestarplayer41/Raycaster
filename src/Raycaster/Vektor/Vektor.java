@@ -28,7 +28,7 @@ public class Vektor {
     }
 
     public double angle(Vektor v) {
-        //gibt keine Grad zurück!
+        //gibt keine Grad zurück (glaube ich)
         double oben = this.x * v.getX() + this.y * v.getY();
         double unten = Math.pow((this.x * this.x + this.y * this.y), 0.5) * Math.pow((v.getX() * v.getX() + v.getY() * v.getY()), 0.5);
         double cos = Math.cos((oben / unten));
@@ -37,7 +37,7 @@ public class Vektor {
     }
 
     public double length() {
-
+        //returns length of Vektor
         return (java.lang.Math.pow((x * x + y * y), 0.5));
     }
 
@@ -45,7 +45,7 @@ public class Vektor {
         return x;
     }
     public void changeDir(double degrees){
-
+        //changes dir of dir vektor
         double x=  (this.x*Math.cos(Math.toRadians(degrees)))-(this.y*Math.sin(Math.toRadians(degrees)));
         double y=  (this.x*Math.sin(Math.toRadians(degrees)))+(this.y*Math.cos(Math.toRadians(degrees)));
         this.x = x;

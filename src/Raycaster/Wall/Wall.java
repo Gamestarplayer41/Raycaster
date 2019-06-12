@@ -49,6 +49,7 @@ public class Wall {
         return height;
     }
     public double[] intersection(Punkt p1, Punkt p2) {
+        // calculates Intersection with ray
         Punkt p3 = punkt1;
         Punkt p4 = punkt2;
         double[] xylength = new double[3];

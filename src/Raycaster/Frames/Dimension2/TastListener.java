@@ -13,6 +13,7 @@ public class TastListener implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+        //takes keyboard input and moves rays
         int key = e.getKeyCode();
         if(key == KeyEvent.VK_LEFT){
             Start.manager.dir.changeDir(-10);

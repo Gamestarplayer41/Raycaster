@@ -11,7 +11,7 @@ import java.awt.event.MouseMotionListener;
 public class Mauslistener implements MouseMotionListener {
     @Override
     public void mouseDragged(MouseEvent e) {
-
+        // Takes mouseinput and transforms it to the Rays
         Start.manager.Player.setX(e.getX());
         Start.manager.Player.setY(e.getY()+1); //genauigkeit
         Start.manager.mover.mover(e.getX(),e.getY());
