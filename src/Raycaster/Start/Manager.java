@@ -14,7 +14,7 @@ import java.awt.event.KeyEvent;
 
 public class Manager {
     public Mover mover = new Mover();
-    public double walls = 100;
+    public double walls = 10;
     public Wall[] wall = new Wall[(int) walls];
     public double Rays = 300;     //anzahl rays
     public Ray[] ray = new Ray[(int) Rays];  //rays
