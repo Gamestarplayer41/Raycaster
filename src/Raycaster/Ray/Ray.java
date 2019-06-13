@@ -33,6 +33,9 @@ public class Ray {
     public double getLength() {
         return length;
     }
+    public void setLength(double length) {
+        this.length = length;
+    }
     public Vektor getVektor() {
         return vektor;
     }
@@ -48,9 +51,12 @@ public class Ray {
     public void setP1(double x, double y){
         p1.setX(x);
         p1.setY(y);
+        vektor.setX(p1.getX()-p2.getX());
     }
     public void setP2(double x, double y){
         p2.setX(x);
         p2.setY(y);
+        vektor.setY(p1.getY()-p2.getY());
+
     }
 }

@@ -13,9 +13,12 @@ public class Mauslistener implements MouseMotionListener {
     public void mouseDragged(MouseEvent e) {
         // Takes mouseinput and transforms it to the Rays
         Start.manager.Player.setX(e.getX());
-        Start.manager.Player.setY(e.getY()+1); //genauigkeit
-        Start.manager.mover.mover(e.getX(),e.getY());
+        Start.manager.Player.setY(e.getY() + 1); //genauigkeit
+
+        Start.manager.mover.mover(e.getX(), e.getY());
+        Start.manager.calcIntersect();
         Start.manager.frame2D.repaint();
+        Start.manager.frame3D.repaint();
     }
 
     @Override

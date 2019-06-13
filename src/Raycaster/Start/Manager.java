@@ -20,7 +20,7 @@ public class Manager {
     public Punkt Player = new Punkt(10, 10); // Spieler Pos
     public Vektor dir = new Vektor(new Punkt(0, 0), new Punkt(100, 0)); // sichtrichtung
 
-    public double fov = 20; // degree *2
+    public double fov = -20; // degree *2
     public Frame2D frame2D; //2D Frame
     public Frame3D frame3D; // 3D Frame
 
@@ -50,7 +50,9 @@ public class Manager {
             }
 
             if (intersect[3] != 0) {
+                ray[i].setP1(Player.getX(),Player.getY());
                 ray[i].setP2(intersect[0], intersect[1]);
+                ray[i].setLength(intersect[2]);
                 ray[i].setHit(true);
             } else {
                 ray[i].setHit(false);
@@ -60,13 +62,18 @@ public class Manager {
         }
     }
 
-    public void Init() {
+    void Init() {
         //init all
         genRays();
         genWalls();
         frame2D = new Frame2D();
         frame3D = new Frame3D();
     }
+    public double projektionsAbstand(){
+            double d = (250/2)* java.lang.Math.tan(java.lang.Math.toRadians((fov)));
+            return d;
+        }
+
 
     private void genRays() {
         //create rays

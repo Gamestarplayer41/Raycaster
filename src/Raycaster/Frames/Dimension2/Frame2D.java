@@ -43,7 +43,7 @@ public class Frame2D extends JPanel {
 
     private void paintRay(Graphics g) {
         //paints Rays
-        Start.manager.calcIntersect();
+
         g.setColor(Color.white);
         for (int i = 0; i < Start.manager.Rays; i++) {
             g.drawLine((int) Start.manager.Player.getX(), (int) Start.manager.Player.getY(), (int) Start.manager.ray[i].getP2().getX(), (int) Start.manager.ray[i].getP2().getY());
