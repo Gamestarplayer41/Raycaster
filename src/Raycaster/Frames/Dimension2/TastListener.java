@@ -13,6 +13,7 @@ public class TastListener implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+
         //takes keyboard input and moves rays
         int key = e.getKeyCode();
         if(key == KeyEvent.VK_LEFT){
@@ -22,7 +23,9 @@ public class TastListener implements KeyListener {
             Start.manager.dir.changeDir(10);
         }
         Start.manager.mover.mover(Start.manager.Player.getX(),Start.manager.Player.getY());
+        Start.manager.calcIntersect();
         Start.manager.frame2D.repaint();
+        Start.manager.frame3D.repaint();
     }
 
     @Override
