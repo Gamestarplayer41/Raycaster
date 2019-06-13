@@ -16,7 +16,7 @@ public class Frame2D extends JPanel {
         this.setBackground(Color.black);
         frame.add(this);
 
-        frame.setLocation(500, 0);
+        frame.setLocation(1000, 0);
         frame.setSize(500, 500);
 
         frame.setVisible(true);

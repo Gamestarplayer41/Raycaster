@@ -9,19 +9,21 @@ import Raycaster.Ray.Ray;
 import Raycaster.Vektor.Vektor;
 import Raycaster.Wall.Wall;
 
+import javax.swing.*;
 import java.awt.*;
 
 public class Manager {
+    public Frame2D frame2D = new Frame2D(); //2D Frame
+    public Frame3D frame3D = new Frame3D(); // 3D Frame
     public Mover mover = new Mover(); // Bewegt Rays
     public double walls = 10; //anzahl der Walls
     public Wall[] wall = new Wall[(int) walls]; //walls
-    public double Rays = 500;     //anzahl rays
+    public double Rays = frame3D.width;     //anzahl rays
     public Ray[] ray = new Ray[(int) Rays];  //rays
     public Punkt Player = new Punkt(10, 10); // Spieler Pos
     public Vektor dir = new Vektor(new Punkt(0, 0), new Punkt(100, 0)); // sichtrichtung
-    public double fov = -20; // negative because its flipped
-    public Frame2D frame2D; //2D Frame
-    public Frame3D frame3D; // 3D Frame
+    public double fov = -30; // negative because its flipped
+
 
     private void genWalls() {
         //Gen walls Auto.
@@ -65,12 +67,12 @@ public class Manager {
         //init all
         genRays();
         genWalls();
-        frame2D = new Frame2D();
-        frame3D = new Frame3D();
+
     }
 
     public double projektionsAbstand() {
-        double d = (250 / 2) * java.lang.Math.tan(java.lang.Math.toRadians((fov)));
+
+        double d = (frame3D.heigth / 2) * java.lang.Math.tan(java.lang.Math.toRadians((fov)));
         return d;
     }
 
@@ -92,10 +94,10 @@ public class Manager {
         if(winkel <0){
             winkel *= -1;
         }
-        double projektionsabstand = Start.manager.projektionsAbstand();
+        double projektionsabstand = projektionsAbstand();
         double lengthray = ray[rayNr].getLength();
         double lengthreal = lengthray * winkel;
-        double wallheigth = (64 *projektionsabstand) / lengthreal;
+        double wallheigth = (20 *projektionsabstand) / lengthreal;
         return wallheigth;
     }
 
