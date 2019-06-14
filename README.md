@@ -11,4 +11,4 @@ Programmed in Intellij.
 
 Debugger is not working because:Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended 
 
-Idk what this means ;D
+Idk how to fix it or what it causes. It appeared randomly.
