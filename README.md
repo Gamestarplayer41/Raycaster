@@ -6,7 +6,6 @@ Rays getting sent out of the player's point and then calculated if there is an i
 
 Controls will be added later. V0.1.1 has in window 2 mouse control added. Drag mouse for moving. Left and right arrow key control the direction.
 
-Nullpointer will be fixed later (adjustable window causes it at the start).
 
 Texture will eventually be added later. A map creator will also be added in a later version (other repo).
 
