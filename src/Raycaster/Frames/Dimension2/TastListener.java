@@ -1,5 +1,6 @@
 package Raycaster.Frames.Dimension2;
 
+import Raycaster.Start.Mathe;
 import Raycaster.Start.Start;
 
 import java.awt.event.KeyEvent;
@@ -23,7 +24,7 @@ public class TastListener implements KeyListener {
             Start.manager.dir.changeDir(10);
         }
         Start.manager.mover.mover(Start.manager.Player.getX(),Start.manager.Player.getY());
-        Start.manager.calcIntersect();
+        Mathe.calcIntersect();
         Start.manager.frame2D.repaint();
         Start.manager.frame3D.repaint();
     }

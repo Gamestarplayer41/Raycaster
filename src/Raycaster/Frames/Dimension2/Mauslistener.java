@@ -3,6 +3,7 @@ package Raycaster.Frames.Dimension2;
 import Raycaster.Punkt.Punkt;
 import Raycaster.Ray.Ray;
 import Raycaster.Start.Manager;
+import Raycaster.Start.Mathe;
 import Raycaster.Start.Start;
 
 import java.awt.event.MouseEvent;
@@ -16,7 +17,7 @@ public class Mauslistener implements MouseMotionListener {
         Start.manager.Player.setY(e.getY() + 1); //genauigkeit
 
         Start.manager.mover.mover(e.getX(), e.getY());
-        Start.manager.calcIntersect();
+        Mathe.calcIntersect();
         Start.manager.frame2D.repaint();
         Start.manager.frame3D.repaint();
     }

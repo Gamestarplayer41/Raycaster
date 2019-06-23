@@ -1,5 +1,6 @@
 package Raycaster.Frames.Dimension3;
 
+import Raycaster.Start.Mathe;
 import Raycaster.Start.Start;
 import Raycaster.Vektor.Vektor;
 
@@ -41,7 +42,7 @@ public class Frame3D extends JPanel {
 //            double lengtheucl = Start.manager.ray[i].getLength();
 //            double lengthreal = lengtheucl * winkel2;
 //             double wallheigth = (64 *a) / lengthreal;
-            double wallheigth = Start.manager.calcWallHeight(i);
+            double wallheigth = Mathe.calcWallHeight(i);
             if (Start.manager.ray[i].isHit()) {
                 g.drawLine(i, 500, i, (int) (500 - wallheigth));
                 g.drawLine(i, 500, i, (int) (500 + wallheigth));
