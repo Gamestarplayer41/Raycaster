@@ -6,6 +6,7 @@ import Raycaster.Vektor.Vektor;
 import java.awt.*;
 
 public class Wall {
+    private double test;
     private Punkt punkt1;
     private Punkt punkt2;
     private Color color;
